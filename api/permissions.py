@@ -12,8 +12,7 @@ class UserForbidden(APIException):
 
 class ReadOnly(permissions.BasePermission):
     def has_permission(self, request, view):
-        if request.method in permissions.SAFE_METHODS:
-            return True
+        return request.method in permissions.SAFE_METHODS
 
 
 class AdminRequired(permissions.BasePermission):
