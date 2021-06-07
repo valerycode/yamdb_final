@@ -3,11 +3,8 @@ from .comment_view import CommentViewSet
 from .genre_view import GenreViewSet
 from .review_view import ReviewViewSet
 from .title_view import TitleViewSet
-from .user_view import (
-    RegistrationView,
-    RequestForRegistrationView,
-    UserViewSet,
-)
+from .user_view import (RegistrationView, RequestForRegistrationView,
+                        UserViewSet)
 
 __all__ = [
     CategoryViewSet,

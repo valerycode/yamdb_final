@@ -1,7 +1,7 @@
+from rest_framework import serializers
+
 from api.models import Category, Genre, Title
 from api.serializers import CategorySerializer, GenreSerializer
-
-from rest_framework import serializers
 
 
 class TitleListSerializer(serializers.ModelSerializer):

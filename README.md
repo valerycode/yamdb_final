@@ -22,3 +22,6 @@ YaMDb - проект, собирающий отзывы на произведе�
 - запустить приложение
 
 ```python manage.py runserver```
+
+- добавить бейдж о статусе работы workflow
+https://github.com/<OWNER>/<REPOSITORY>/actions/workflows/<WORKFLOW_FILE>/badge.svg

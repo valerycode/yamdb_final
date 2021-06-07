@@ -1,10 +1,10 @@
+from rest_framework import filters
+from rest_framework.pagination import PageNumberPagination
+
 from api.mixins import CreateListDeleteViewSet
 from api.models import Category
 from api.permissions import AdminRequired, ReadOnly
 from api.serializers import CategorySerializer
-
-from rest_framework import filters
-from rest_framework.pagination import PageNumberPagination
 
 
 class CategoryViewSet(CreateListDeleteViewSet):

@@ -1,14 +1,12 @@
+from django.db.models import Avg
+from django_filters import rest_framework as filters
+from rest_framework import viewsets
+from rest_framework.pagination import PageNumberPagination
+
 from api.filters import TitleFilter
 from api.models import Title
 from api.permissions import AdminRequired, ReadOnly
 from api.serializers import TitleDetailSerializer, TitleListSerializer
-
-from django.db.models import Avg
-
-from django_filters import rest_framework as filters
-
-from rest_framework import viewsets
-from rest_framework.pagination import PageNumberPagination
 
 
 class TitleViewSet(viewsets.ModelViewSet):
