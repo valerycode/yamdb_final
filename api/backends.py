@@ -10,5 +10,5 @@ class ConfirmUserRegistrationAuthentication(authentication.BaseAuthentication):
             user = UserConfirmCodeDb.objects.get(email=email,
                                                  confirm_code=confirm_code)
         except UserConfirmCodeDb.DoesNotExist:
-            return
+            return None
         return user

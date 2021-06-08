@@ -33,13 +33,12 @@ class UserViewSet(viewsets.ModelViewSet):
             serializer = self.get_serializer_class()
             data = serializer(request.user).data
             return Response(data, status=status.HTTP_200_OK)
-        if request.method == 'PATCH':
-            serializer = self.get_serializer_class()(request.user,
-                                                     data=request.data,
-                                                     partial=True)
-            serializer.is_valid(raise_exception=True)
-            serializer.save()
-            return Response(serializer.data, status=status.HTTP_200_OK)
+        serializer = self.get_serializer_class()(request.user,
+                                                 data=request.data,
+                                                 partial=True)
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+        return Response(serializer.data, status=status.HTTP_200_OK)
 
 
 class RequestForRegistrationView(CreateAPIView):
