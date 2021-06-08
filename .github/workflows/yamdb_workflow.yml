@@ -57,7 +57,7 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }}
           stack_file_name: docker-compose.yaml
           script: |
-            sudo docker valerycode/yamdb_final
+            sudo docker pull valerycode/yamdb_final
             sudo docker-compose stop
             sudo docker-compose rm web
             # Создаст файл для переменных окружения
