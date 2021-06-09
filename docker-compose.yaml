@@ -9,8 +9,8 @@ services:
   web:
     image: valerycode/yamdb_final:latest
     restart: always
-    ports:
-    - '8000:8000'
+    expose:
+    - 8000
     volumes:
     - static_value:/code/static/
     - media_value:/code/media/
