@@ -50,8 +50,10 @@ PASSPHRASE
 ```python -m pip install -r requirements.txt```
 
 - сделать пуш с любым изменением в проекте
+
+```git push```
   
-###Как развернуть проект (локально и с тестовыми данными)
+### Как развернуть проект (локально и с тестовыми данными)
 - отредактировать docker-compose.yaml
 web:
   image: <DOCKER_USERNAME>/<DOCKER_REPO>:latest
