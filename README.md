@@ -4,34 +4,36 @@ YaMDb - проект, собирающий отзывы на произведе�
 Сами произведения в проекте не хранятся.
 API развернут по адресу http://84.252.143.224/api/v1/
 ### Технологии
-- [Django REST Framework] - is a powerful and flexible toolkit for building Web APIs.
-- [Simple JWT] - a JSON Web Token authentication plugin for the Django REST Framework.
-- [Python] - is an interpreted high-level general-purpose programming language.
-- [Django Framework] - is a high-level Python Web framework that encourages rapid development and clean, pragmatic design.
+- [Django REST Framework]:https://www.django-rest-framework.org/ - is a powerful and flexible toolkit for building Web APIs.
+- [Simple JWT] (https://django-rest-framework-simplejwt.readthedocs.io/en/latest/)- a JSON Web Token authentication plugin for the Django REST Framework.
+- [Python] (https://www.python.org/) - is an interpreted high-level general-purpose programming language.
+- [Django Framework] (https://www.djangoproject.com/) - is a high-level Python Web framework that encourages rapid development and clean, pragmatic design.
 - [PostgeSQL] - is an open source object-relational database system that uses and extends the SQL language combined with many features.
-- [Docker] - is a set of platform as a service (PaaS) products that use OS-level virtualization to deliver software in packages (containers).
-- [Gunicorn] - is a Python WSGI HTTP Server for UNIX.
-- [Nginx] - is a web server that can also be used as a reverse proxy, load balancer, mail proxy and HTTP cache.
+- [Docker] (https://www.docker.com/) - is a set of platform as a service (PaaS) products that use OS-level virtualization to deliver software in packages (containers).
+- [Gunicorn] (https://gunicorn.org/) - is a Python WSGI HTTP Server for UNIX.
+- [Nginx] (https://nginx.org/) - is a web server that can also be used as a reverse proxy, load balancer, mail proxy and HTTP cache.
 ### Как развернуть проект (на сервере)
  - сделать fork проекта в свой аккаунт
 
 [![](https://img.shields.io/badge/my%20project-fork!-informational?style=for-the-badge&logo=appveyor)](https://github.com/valerycode/yamdb_final/fork)
 - добавить свои данные для переменных в secrets:
-- DB_ENGINE
-- DB_HOST
-- DB_NAME
-- DB_PORT
-- DOCKER_PASSWORD
-- DOCKER_USERNAME
-- HOST
-- POSTGRES_PASSWORD
-- POSTGRES_USER
--SSH_KEY
-- TELEGRAM_TO
-- TELEGRAM_TOKEN
-- USER
-- PASSPHRASE
-  
+```
+DB_ENGINE
+DB_HOST
+DB_NAME
+DB_PORT
+DOCKER_PASSWORD
+DOCKER_USERNAME
+HOST
+POSTGRES_PASSWORD
+POSTGRES_USER
+SSH_KEY
+TELEGRAM_TO
+TELEGRAM_TOKEN
+USER
+PASSPHRASE
+```
+
 - скачать репозиторий, перейти в директорию с проектом
 
 ```git clone git@github.com:ваш-логин/yamdb_final.git```
@@ -73,3 +75,5 @@ web:
 - собираем статические данные
 
 ```sudo docker-compose exec web python manage.py collectstatic --no-input```
+
+[]: https://www.django-rest-framework.org/
