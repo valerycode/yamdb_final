@@ -1,17 +1,17 @@
 ![example workflow](https://github.com/valerycode/yamdb_final/actions/workflows/yamdb_workflow.yaml/badge.svg)
+API развернут по адресу http://84.252.143.224/api/v1/
 # Описание проекта
 YaMDb - проект, собирающий отзывы на произведения(книги, фильмы, музыка и т.д.). 
 Сами произведения в проекте не хранятся.
-API развернут по адресу http://84.252.143.224/api/v1/
 ### Технологии
-- [Django REST Framework]:https://www.django-rest-framework.org/ - is a powerful and flexible toolkit for building Web APIs.
-- [Simple JWT] (https://django-rest-framework-simplejwt.readthedocs.io/en/latest/)- a JSON Web Token authentication plugin for the Django REST Framework.
-- [Python] (https://www.python.org/) - is an interpreted high-level general-purpose programming language.
-- [Django Framework] (https://www.djangoproject.com/) - is a high-level Python Web framework that encourages rapid development and clean, pragmatic design.
-- [PostgeSQL] - is an open source object-relational database system that uses and extends the SQL language combined with many features.
-- [Docker] (https://www.docker.com/) - is a set of platform as a service (PaaS) products that use OS-level virtualization to deliver software in packages (containers).
-- [Gunicorn] (https://gunicorn.org/) - is a Python WSGI HTTP Server for UNIX.
-- [Nginx] (https://nginx.org/) - is a web server that can also be used as a reverse proxy, load balancer, mail proxy and HTTP cache.
+- [Django REST Framework](https://www.django-rest-framework.org/) - is a powerful and flexible toolkit for building Web APIs.
+- [Simple JWT](https://django-rest-framework-simplejwt.readthedocs.io/en/latest/) - a JSON Web Token authentication plugin for the Django REST Framework.
+- [Python](https://www.python.org/) - is an interpreted high-level general-purpose programming language.
+- [Django Framework](https://www.djangoproject.com/) - is a high-level Python Web framework that encourages rapid development and clean, pragmatic design.
+- [PostgeSQL](https://www.postgresql.org/) - is an open source object-relational database system that uses and extends the SQL language combined with many features.
+- [Docker](https://www.docker.com/) - is a set of platform as a service (PaaS) products that use OS-level virtualization to deliver software in packages (containers).
+- [Gunicorn](https://gunicorn.org/) - is a Python WSGI HTTP Server for UNIX.
+- [Nginx](https://nginx.org/) - is a web server that can also be used as a reverse proxy, load balancer, mail proxy and HTTP cache.
 ### Как развернуть проект (на сервере)
  - сделать fork проекта в свой аккаунт
 
@@ -75,5 +75,3 @@ web:
 - собираем статические данные
 
 ```sudo docker-compose exec web python manage.py collectstatic --no-input```
-
-[]: https://www.django-rest-framework.org/
