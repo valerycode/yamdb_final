@@ -2,24 +2,74 @@
 # Описание проекта
 YaMDb - проект, собирающий отзывы на произведения(книги, фильмы, музыка и т.д.). 
 Сами произведения в проекте не хранятся.
+API развернут по адресу http://84.252.143.224/api/v1/
 ### Технологии
 - [Django REST Framework] - is a powerful and flexible toolkit for building Web APIs.
 - [Simple JWT] - a JSON Web Token authentication plugin for the Django REST Framework.
-### Команды для запуска приложения в режиме разработки
-- перейти в директорию с проектом
+- [Python] - is an interpreted high-level general-purpose programming language.
+- [Django Framework] - is a high-level Python Web framework that encourages rapid development and clean, pragmatic design.
+- [PostgeSQL] - is an open source object-relational database system that uses and extends the SQL language combined with many features.
+- [Docker] - is a set of platform as a service (PaaS) products that use OS-level virtualization to deliver software in packages (containers).
+- [Gunicorn] - is a Python WSGI HTTP Server for UNIX.
+- [Nginx] - is a web server that can also be used as a reverse proxy, load balancer, mail proxy and HTTP cache.
+### Как развернуть проект (на сервере)
+ - сделать fork проекта в свой аккаунт
 
+[![](https://img.shields.io/badge/my%20project-fork!-informational?style=for-the-badge&logo=appveyor)](https://github.com/valerycode/yamdb_final/fork)
+- добавить свои данные для переменных в secrets:
+- DB_ENGINE
+- DB_HOST
+- DB_NAME
+- DB_PORT
+- DOCKER_PASSWORD
+- DOCKER_USERNAME
+- HOST
+- POSTGRES_PASSWORD
+- POSTGRES_USER
+-SSH_KEY
+- TELEGRAM_TO
+- TELEGRAM_TOKEN
+- USER
+- PASSPHRASE
+  
+- скачать репозиторий, перейти в директорию с проектом
+
+```git clone git@github.com:ваш-логин/yamdb_final.git```
 ```cd /<путь-до-директории>/```
-- создать виртуальное окружение, активировать
+
+- создать виртуальное окружение, активировать его
 
 ```python3 -m venv venv```
-
 ```. venv/bin/activate```
+
 - установить зависимости
 
 ```python -m pip install -r requirements.txt```
-- применить миграции для создания таблиц БД
 
-```python manage.py migrate```
-- запустить приложение
+- сделать пуш с любым изменением в проекте
+  
+###Как развернуть проект (локально и с тестовыми данными)
+- отредактировать docker-compose.yaml
+web:
+  image: <DOCKER_USERNAME>/<DOCKER_REPO>:latest
+--->
 
-```python manage.py runserver```
+web:
+  build: .
+- собрать образ, запустить
+
+```sudo docker build -t <задать название образа> .```
+
+```sudo docker-compose up```
+
+- применить миграции для приложения
+
+```sudo docker-compose exec web python manage.py migrate --noinput```
+
+- создать суперпользователя
+
+```sudo docker-compose exec web python manage.py createsuperuser```
+
+- собираем статические данные
+
+```sudo docker-compose exec web python manage.py collectstatic --no-input```
