@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_filters',
+    'django.contrib.sites',
 ]
 
 MIDDLEWARE = [
@@ -154,3 +155,5 @@ SIMPLE_JWT = {
     'AUTH_HEADER_TYPES': ('Bearer',),
     'ACCESS_TOKEN_LIFETIME': timedelta(weeks=9999)
 }
+
+SITE_ID = 1
