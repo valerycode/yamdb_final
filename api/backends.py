@@ -7,8 +7,7 @@ class ConfirmUserRegistrationAuthentication(authentication.BaseAuthentication):
     """Аутентификация будущего пользователя."""
     def authenticate(self, request, email=None, confirm_code=None):
         try:
-            user = UserConfirmCodeDb.objects.get(
+            return UserConfirmCodeDb.objects.get(
                 email=email, confirm_code=confirm_code)
-            return user
         except UserConfirmCodeDb.DoesNotExist:
             return None
