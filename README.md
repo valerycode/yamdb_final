@@ -1,9 +1,9 @@
 ![yamdb](https://github.com/valerycode/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
-API развернут по адресу http://84.252.143.224/api/v1/
 # Описание проекта
-YaMDb - проект, собирающий отзывы на произведения(книги, фильмы, музыка и т.д.). 
+Была поставлена задача написать API для проекта YaMDb(это проект, собирающий отзывы пользователей на произведения(книги, фильмы, музыка и т.д.)). 
 Сами произведения в проекте не хранятся.
+К проекту по адресу http://127.0.0.1:8000/redoc/ подключена документация API YaMDb. В ней описаны возможные запросы к API и структура ожидаемых ответов. Для каждого запроса указаны уровни прав доступа: пользовательские роли, которым разрешён запрос.
 ### Технологии
 - [Django REST Framework](https://www.django-rest-framework.org/) - is a powerful and flexible toolkit for building Web APIs.
 - [Simple JWT](https://django-rest-framework-simplejwt.readthedocs.io/en/latest/) - a JSON Web Token authentication plugin for the Django REST Framework.

@@ -1,3 +1,5 @@
+from typing import Union
+
 from rest_framework import filters
 from rest_framework.pagination import PageNumberPagination
 
@@ -11,7 +13,7 @@ class CategoryViewSet(CreateListDeleteViewSet):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
     lookup_field = 'slug'
-    permission_classes = [ReadOnly | AdminRequired]
+    permission_classes = [Union[ReadOnly, AdminRequired]]
     filter_backends = [filters.SearchFilter]
     search_fields = ['name', ]
     pagination_class = PageNumberPagination

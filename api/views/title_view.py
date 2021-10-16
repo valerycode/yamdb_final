@@ -1,3 +1,5 @@
+from typing import Union
+
 from django.db.models import Avg
 from django_filters import rest_framework as filters
 from rest_framework import viewsets
@@ -14,7 +16,7 @@ class TitleViewSet(viewsets.ModelViewSet):
         rating=Avg('reviews__score')).order_by('name')
     filter_backends = (filters.DjangoFilterBackend,)
     filterset_class = TitleFilter
-    permission_classes = [ReadOnly | AdminRequired]
+    permission_classes = [Union[ReadOnly, AdminRequired]]
     pagination_class = PageNumberPagination
 
     def get_serializer_class(self):

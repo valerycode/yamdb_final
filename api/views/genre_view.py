@@ -1,3 +1,5 @@
+from typing import Union
+
 from rest_framework import filters
 from rest_framework.pagination import PageNumberPagination
 
@@ -10,7 +12,7 @@ from api.serializers import GenreSerializer
 class GenreViewSet(CreateListDeleteViewSet):
     queryset = Genre.objects.all()
     serializer_class = GenreSerializer
-    permission_classes = [ReadOnly | AdminRequired]
+    permission_classes = [Union[ReadOnly, AdminRequired]]
     lookup_field = 'slug'
     filter_backends = [filters.SearchFilter]
     search_fields = ['name', ]
